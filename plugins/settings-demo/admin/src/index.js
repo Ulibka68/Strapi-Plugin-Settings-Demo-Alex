@@ -40,6 +40,25 @@ export default strapi => {
     // Refer to the Plugins settings API
     // https://strapi.io/documentation/developer-docs/latest/development/local-plugins-customization.html#plugin-s-front-end-settings-api
     settings: {
+
+
+      // Add a link into the global section of the settings view
+      // Нажми settings - будет в самом верху
+      global: {
+        links: [
+          {
+            title: 'Setting link 1',
+            to: `${strapi.settingsBaseURL}/setting-link-1`,
+            name: 'settingLink1',
+            Component: PostCount,
+            // Bool : https://reacttraining.com/react-router/web/api/Route/exact-bool
+            exact: false,
+            // permissions: [{action: 'plugins::my-plugin.action-name', subject: null}],
+          },
+        ],
+      },
+      // mainComponent: PostCount,
+
       menuSection: {
         id: 'Internalization',
         title: {
@@ -92,7 +111,7 @@ export default strapi => {
           destination: `/plugins/${pluginId}/2`,
           icon: 'cat',
           label: 'Тестовое меню слева',
-          name:name+1,
+          name: name + 1,
           permissions: [],
         },
       ],
