@@ -70,7 +70,7 @@ export default strapi => {
     menu: {
 
 
-      // Отвечает за меню соева в секции PLUGINS
+      // Отвечает за меню слева в секции PLUGINS
       pluginsSectionLinks: [
         {
           destination: `/plugins/${pluginId}`,
