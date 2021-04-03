@@ -5,22 +5,23 @@
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
+    "developw": "strapi develop --watch-admin",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
   },
   "devDependencies": {},
   "dependencies": {
-    "strapi": "3.1.1",
-    "strapi-admin": "3.1.1",
-    "strapi-utils": "3.1.1",
-    "strapi-plugin-content-type-builder": "3.1.1",
-    "strapi-plugin-content-manager": "3.1.1",
-    "strapi-plugin-users-permissions": "3.1.1",
-    "strapi-plugin-email": "3.1.1",
-    "strapi-plugin-upload": "3.1.1",
-    "strapi-connector-bookshelf": "3.1.1",
-    "knex": "<0.20.0",
+    "strapi": "3.5.4",
+    "strapi-admin": "3.5.4",
+    "strapi-utils": "3.5.4",
+    "strapi-plugin-content-type-builder": "3.5.4",
+    "strapi-plugin-content-manager": "3.5.4",
+    "strapi-plugin-users-permissions": "3.5.4",
+    "strapi-plugin-email": "3.5.4",
+    "strapi-plugin-upload": "3.5.4",
+    "strapi-connector-bookshelf": "3.5.4",
+    "knex": "^0.95.4",
     "sqlite3": "latest"
   },
   "author": {
