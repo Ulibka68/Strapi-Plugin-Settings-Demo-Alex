@@ -47,9 +47,9 @@ export default strapi => {
       global: {
         links: [
           {
-            title: 'Setting link 1',
+            title: 'Меню в разделе Settings - в секции Global Settings',
             to: `${strapi.settingsBaseURL}/setting-link-1`,
-            name: 'settingLink1',
+            name: 'Меню в разделе Settings - в секции Global Settings',
             Component: PostCount,
             // Bool : https://reacttraining.com/react-router/web/api/Route/exact-bool
             exact: false,
@@ -60,16 +60,18 @@ export default strapi => {
       // mainComponent: PostCount,
 
       menuSection: {
+        // Описание секции меню плагина
         id: 'Internalization',
         title: {
           id: pluginId,
           defaultMessage: 'Custom Plugin Gayrat section'
         },
+        // Пункты меню
         links: [
           {
             title: {
               id: `${pluginId}.answer`,
-              defaultMessage: 'The Answer тест'
+              defaultMessage: 'The Answer - Custom Plugin Gayrat section'
             },
             to: `${strapi.settingsBaseURL}/${pluginId}/answer`,
             Component: PostCount
@@ -77,7 +79,7 @@ export default strapi => {
           {
             title: {
               id: `${pluginId}.question`,
-              defaultMessage: 'Интернализация вопрос'
+              defaultMessage: 'Интернализация - Custom Plugin Gayrat section'
             },
             to: `${strapi.settingsBaseURL}/${pluginId}/answer`,
             Component: PostCount
@@ -96,7 +98,7 @@ export default strapi => {
           icon: 'paw',
           label: {
             id: `${pluginId}.plugin.name`,
-            defaultMessage: name,
+            defaultMessage: 'Плагин settings demo',
           },
           name,
           permissions: [
@@ -110,7 +112,7 @@ export default strapi => {
         {
           destination: `/plugins/${pluginId}/2`,
           icon: 'cat',
-          label: 'Тестовое меню слева',
+          label: 'Плагин settings меню2',
           name: name + 1,
           permissions: [],
         },
